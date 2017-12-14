@@ -1,4 +1,4 @@
-class CreateSpreeWithdrawalInfos < ActiveRecord::Migration
+class CreateSpreeWithdrawalInfos < ActiveRecord::Migration[5.1]
   def change
     create_table :spree_withdrawal_infos do |t|
       t.integer :bag_id

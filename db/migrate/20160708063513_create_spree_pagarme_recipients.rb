@@ -1,4 +1,4 @@
-class CreateSpreePagarmeRecipients < ActiveRecord::Migration
+class CreateSpreePagarmeRecipients < ActiveRecord::Migration[5.1]
   def change
     create_table :spree_pagarme_recipients do |t|
     	t.integer :user_id
