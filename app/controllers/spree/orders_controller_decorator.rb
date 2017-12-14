@@ -1,8 +1,7 @@
 # coding: utf-8
 Spree::OrdersController.class_eval do
 	protect_from_forgery
-	skip_before_action :restriction_access
-
+	
 	def postback
 		if valid_postback?
 			PagarMe.api_key = ENV['PAGARME_API_KEY']
