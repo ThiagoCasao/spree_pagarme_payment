@@ -48,6 +48,5 @@ module Spree
     def update_bank
       get_recipient
     end
-
   end
 end

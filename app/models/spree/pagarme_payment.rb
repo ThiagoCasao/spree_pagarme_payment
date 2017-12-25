@@ -17,6 +17,7 @@ module Spree
 
 		def transaction(create_if_nil = false)
 			PagarMe.api_key = ENV['PAGARME_API_KEY']
+
 			if self.transaction_id
 				transaction = PagarMe::Transaction.find_by_id(self.transaction_id)
 			elsif create_if_nil

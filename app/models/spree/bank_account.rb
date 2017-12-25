@@ -29,7 +29,15 @@ module Spree
     end
 
     def to_s
-      [banco, agencia, conta, (cpf ? cpf : cnpj), nome, obs, (is_valid? ? "" : "*")].join(" / ")
+      [
+        banco,
+        agencia,
+        conta,
+        (cpf ? cpf : cnpj),
+        nome,
+        obs,
+        (is_valid? ? "" : "*")
+      ].join(" / ")
     end
 
     def bank_code
@@ -52,7 +60,8 @@ module Spree
     end
 
     def can_update?
-      (withdrawals.completed.size > 0 || deleted?) ? false : true
+      # (withdrawals.completed.size > 0 || deleted?) ? false : true
+      (deleted?) ? false : true
     end
 
     def get_bank_account
@@ -116,6 +125,5 @@ module Spree
         end
       end
     end
-
   end
 end
