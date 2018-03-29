@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency 'pagarme'
-  spec.add_dependency 'spree_core', '~> 3.3.2'
+  spec.add_dependency 'spree_core', '~> 3.4.4'
   spec.add_dependency 'spree_gateway', '~> 3.3'
   spec.add_dependency 'spree_auth_devise', '~> 3.3'
 
